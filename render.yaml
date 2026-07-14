@@ -2,6 +2,7 @@ services:
   - type: web
     name: magazine-api
     env: node
+    plan: free
     buildCommand: npm install && npm run build --workspace=apps/api
     startCommand: npm start --workspace=apps/api
     envVars:
