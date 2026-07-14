@@ -15,7 +15,7 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/lumina
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
+    origin: true, // Reflects the request origin, allowing Vercel and localhost
     credentials: true,
 }));
 app.use(express.json());
