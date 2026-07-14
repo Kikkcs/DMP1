@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: magazine-api
+    env: node
+    buildCommand: npm install && npm run build --workspace=apps/api
+    startCommand: npm start --workspace=apps/api
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "5000"
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
